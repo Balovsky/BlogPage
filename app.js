@@ -48,7 +48,7 @@ if ("ontouchstart" in document.documentElement)
 {
     imgs.forEach(img =>{
         img.classList.remove('open')
-        img.addEventListener('touchstart', ()=>{
+        img.addEventListener('touchend', ()=>{
             let a = img.parentElement
             let hover = a.children[0]
             hover.classList.add('open')
