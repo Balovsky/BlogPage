@@ -54,7 +54,7 @@ if ("ontouchstart" in document.documentElement)
             hover.classList.add('open')
         })
         hovers.forEach(hover =>{
-            hover.addEventListener('toucheend', ()=>{
+            hover.addEventListener('touchend', ()=>{
                 hover.classList.remove('open')
             })
         })
