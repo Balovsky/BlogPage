@@ -12,6 +12,7 @@ const imgs = document.querySelectorAll('.cover')
 
 
 imgs.forEach(img =>{
+    img.classList.remove('open')
     img.addEventListener('mouseenter', (e)=>{
         let a = img.parentElement
         let hover = a.children[0]
