@@ -11,19 +11,19 @@ const hovers = document.querySelectorAll('.hover')
 const imgs = document.querySelectorAll('.cover')
 
 
-imgs.forEach(img =>{
-    img.classList.remove('open')
-    img.addEventListener('mouseenter', (e)=>{
-        let a = img.parentElement
-        let hover = a.children[0]
-        hover.classList.add('open')
-    })
-    hovers.forEach(hover =>{
-        hover.addEventListener('mouseleave', ()=>{
-            hover.classList.remove('open')
-        })
-    })
-})
+// imgs.forEach(img =>{
+//     img.classList.remove('open')
+//     img.addEventListener('mouseenter', ()=>{
+//         let a = img.parentElement
+//         let hover = a.children[0]
+//         hover.classList.add('open')
+//     })
+//     hovers.forEach(hover =>{
+//         hover.addEventListener('mouseleave', ()=>{
+//             hover.classList.remove('open')
+//         })
+//     })
+// })
 
 const lis = document.querySelectorAll('.menu__list')
 
@@ -43,3 +43,36 @@ window.addEventListener('scroll', ()=>{
         backBtn.classList.remove('showedArrow')
     }
 })
+
+if ("ontouchstart" in document.documentElement)
+{
+    imgs.forEach(img =>{
+        img.classList.remove('open')
+        img.addEventListener('touchstart', ()=>{
+            let a = img.parentElement
+            let hover = a.children[0]
+            hover.classList.add('open')
+        })
+        hovers.forEach(hover =>{
+            hover.addEventListener('toucheend', ()=>{
+                hover.classList.remove('open')
+            })
+        })
+    })
+}
+else
+{
+    imgs.forEach(img =>{
+        img.classList.remove('open')
+        img.addEventListener('mouseenter', ()=>{
+            let a = img.parentElement
+            let hover = a.children[0]
+            hover.classList.add('open')
+        })
+        hovers.forEach(hover =>{
+            hover.addEventListener('mouseleave', ()=>{
+                hover.classList.remove('open')
+            })
+        })
+    })
+}
