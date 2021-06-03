@@ -157,18 +157,19 @@
             <span class="post__title form__tiitle"><Label>GET IN TOUCH</Label></span>
             <span class="post__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut obcaecati deleniti quaerat velit, hic dolor quo excepturi. </span>
         </div>
-        <form name="contact" action="/email.html" data-netlify="true" method="POST" class="form">
+        <form name="contact" action="/email.html" data-netlify-recaptcha="true" data-netlify="true" method="POST" class="form">
             <div class="name">
-                <input type="text" name="first-name" class="Iname" placeholder="FIRST NAME">
-                <input type="text" name="last-name" class="Iname" placeholder="LAST NAME">
+                <input type="text" name="first-name" class="Iname" placeholder="FIRST NAME" required>
+                <input type="text" name="last-name" class="Iname" placeholder="LAST NAME" required>
             </div>
             <div class="contact">
-                <input type="email" name="email" class="Icontact" placeholder="EMAIL ADRESS">
+                <input type="email" name="email" class="Icontact" placeholder="EMAIL ADRESS" required>
                 <input type="tel" name="tel" class="Icontact" placeholder="MOBILE NO.">
             </div>
             <div class="message">
-                <textarea name="mess" id="message" class="mess" cols="30" placeholder="MESSAGE" rows="10"></textarea>
+                <textarea name="mess" id="message" class="mess" cols="30" placeholder="MESSAGE" required rows="10"></textarea>
             </div>
+            <div data-netlify-recaptcha="true"></div>
             <button type="submit" class="sendBtn">SEND</button>
         </form>
     </section>
