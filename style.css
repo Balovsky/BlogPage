@@ -6,7 +6,58 @@
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
 }
-
+.email__section{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 15vh;
+    display: flex;
+    justify-content: center;
+}
+.email__box{
+    /* width: 500px;
+    height: 200px;
+    background: red;
+    font-size: 30px; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.email__send{
+    /* background: red; */
+    background: #666;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 20px;
+    border: 2px solid #555;
+}
+.back__to{
+    margin-top: 20px;
+    font-size: 24px;
+    border: 2px solid #555;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.back__to::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #555;
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.back__to:hover::before{
+    height: 100%;
+}
+.back__to:hover{
+    color: white;
+}
 .back{
     position: fixed;
     bottom: 20px;
@@ -612,6 +663,9 @@ li{
 }
 .shadow{
     transition: all 0.3s ease-in-out;
+}
+button{
+    background: white;
 }
 
 .cookie__btn:hover{
