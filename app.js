@@ -8,7 +8,14 @@ const imgs = document.querySelectorAll('.cover')
 const cookiesBtn = document.querySelector('.cookie__btn')
 const shadowBG = document.querySelector('.shadow')
 const cookiesBanner = document.querySelector('.cookies')
+const sendBtn = document.querySelector('.sendBtn')
+const preloader = document.querySelector('.loader')
 
+window.addEventListener('load', ()=>{
+    preloader.style.display = 'none'
+})
+
+console.log(sendBtn);
 hamb.addEventListener('click', ()=>{
     hamb.classList.toggle('active')
     menu.classList.toggle('showed')
