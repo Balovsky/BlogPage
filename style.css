@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 .email__section{
     width: 80%;
@@ -27,13 +27,14 @@
 .loader{
     position: absolute;
     background: black;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 1200000;
     background-image: url(./images/source.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 10%;
+    transition: all 2.5s ease-in-out;
 }
 .recaptcha{
     margin-top: 20px;
