@@ -13,6 +13,7 @@ const preloader = document.querySelector('.loader')
 
 window.addEventListener('load', ()=>{
     preloader.style.display = 'none'
+    preloader.style.zIndex = '-1'
 })
 
 console.log(sendBtn);
