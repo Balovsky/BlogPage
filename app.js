@@ -17,7 +17,6 @@ window.addEventListener('load', ()=>{
     
 })
 
-console.log(sendBtn);
 hamb.addEventListener('click', ()=>{
     hamb.classList.toggle('active')
     menu.classList.toggle('showed')
@@ -88,8 +87,6 @@ else
     })
 }
  
-
-console.log(shadowBG);
 cookiesBtn.addEventListener('click', ()=>{
         shadowBG.classList.add('hide')
         cookiesBtn.parentElement.classList.add('hide')
